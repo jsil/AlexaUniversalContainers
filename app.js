@@ -34,13 +34,13 @@ app.set("view engine", "jade");
  */
 
 alexaApp.pre = function(request, response, type) {
-  //console.log(request);
-  //if (request.application.applicationId != SKILL_ID) {
-    //console.log('request.application.applicationId is: ' + request.applicationId);
-    //console.log('SKILL_ID is: ' + SKILL_ID);
+  console.log(request);
+  if (request.applicationId != SKILL_ID) {
+    console.log('request.applicationId is: ' + request.applicationId);
+    console.log('SKILL_ID is: ' + SKILL_ID);
     // fail ungracefully
-    //response.fail("Invalid applicationId");
-  //}
+    response.fail("Invalid applicationId");
+  }
 };
 
 
